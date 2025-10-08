@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cass AI Hub</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #e6edf3;
+      font-family: "Segoe UI", sans-serif;
+      overflow-x: hidden;
+    }
+    .navbar {
+      background-color: #161b22;
+    }
+    .navbar-brand {
+      color: #58a6ff !important;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+    .nav-link {
+      color: #c9d1d9 !important;
+      cursor: pointer;
+    }
+    .nav-link.active {
+      background-color: #21262d !important;
+      color: #58a6ff !important;
+      border-radius: 6px;
+    }
+    iframe {
+      width: 100%;
+      height: 85vh;
+      border: none;
+      border-radius: 10px;
+    }
+    .tab-content {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Cass AI Hub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto" id="aiTabs" role="tablist">
+          <li class="nav-item"><a class="nav-link active" id="cass-tab" data-bs-toggle="tab" href="#cass" role="tab">Cass Beta 2.0</a></li>
+          <li class="nav-item"><a class="nav-link" id="dude-tab" data-bs-toggle="tab" href="#dude" role="tab">Dude AI</a></li>
+          <li class="nav-item"><a class="nav-link" id="firefox-tab" data-bs-toggle="tab" href="#firefox" role="tab">Firefox AI</a></li>
+          <li class="nav-item"><a class="nav-link" id="fire-tab" data-bs-toggle="tab" href="#fire" role="tab">AI Fire Dot</a></li>
+          <li class="nav-item"><a class="nav-link" id="mono-tab" data-bs-toggle="tab" href="#mono" role="tab">Mono AI</a></li>
+          <li class="nav-item"><a class="nav-link" id="cass4-tab" data-bs-toggle="tab" href="#cass4" role="tab">Cass 4.1 Beta</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tab content -->
+  <div class="container-fluid mt-3">
+    <div class="tab-content" id="aiTabContent">
+      <div class="tab-pane fade show active" id="cass" role="tabpanel">
+        <iframe src="https://dsduded-cass-beta2-0.hf.space/"></iframe>
+      </div>
+      <div class="tab-pane fade" id="dude" role="tabpanel">
+        <iframe src="https://dsduded-dude-ai.hf.space/"></iframe>
+      </div>
+      <div class="tab-pane fade" id="firefox" role="tabpanel">
+        <iframe src="https://dsduded-firefox-ai-model.hf.space/"></iframe>
+      </div>
+      <div class="tab-pane fade" id="fire" role="tabpanel">
+        <iframe src="https://dsduded-ai-fire-dot.hf.space/"></iframe>
+      </div>
+      <div class="tab-pane fade" id="mono" role="tabpanel">
+        <iframe src="https://dsduded-mono-ai.hf.space/"></iframe>
+      </div>
+      <div class="tab-pane fade" id="cass4" role="tabpanel">
+        <iframe src="https://dsduded-cass4-1beta.hf.space/"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (required for tabs to work) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Fix tab switching -->
+  <script>
+    const triggerTabList = document.querySelectorAll('#aiTabs a')
+    triggerTabList.forEach(tab => {
+      tab.addEventListener('click', event => {
+        event.preventDefault()
+        const tabTrigger = new bootstrap.Tab(tab)
+        tabTrigger.show()
+      })
+    })
+  </script>
+
+</body>
+</html>
